@@ -1,0 +1,25 @@
+#pragma once
+
+#include<iostream>
+using namespace std;
+#define MaxSize 100
+
+template<class ElemType>
+class MinHeap
+{
+private:
+	ElemType *Array;
+	int MaxDauflt;
+	int size;
+public:
+	MinHeap(int M = MaxSize);
+	void GetElem(ElemType* a, int n);
+	void ShiftDown(int n);
+	void ShiftUp(int n);
+	void BuildHeap();
+	ElemType GetMin();
+	bool IsEmpty();
+	void Show();
+	void AddElem(ElemType a);
+	int GetSize() { return size; }
+};
